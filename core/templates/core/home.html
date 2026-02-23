@@ -24,7 +24,46 @@
         <h1 class="fw-bold">Welcome to Clinic Management System</h1>
         <p class="text-muted">Final Year Project - Professional Web Application</p>
     </div>
+<div class="row text-center mb-5">
 
+    <div class="col-md-3">
+        <div class="card bg-light shadow p-3">
+            <h5>Total Doctors</h5>
+            <h2 class="fw-bold text-primary">{{ total_doctors }}</h2>
+        </div>
+        <hr class="my-5">
+
+<div class="text-center">
+    <h3>System Features</h3>
+    <p>✔ Doctor Management</p>
+    <p>✔ Patient Records</p>
+    <p>✔ Appointment Scheduling</p>
+    <p>✔ Admin Dashboard Control</p>
+</div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-light shadow p-3">
+            <h5>Total Patients</h5>
+            <h3>{{ total_patients }}</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-light shadow p-3">
+            <h5>Total Appointments</h5>
+            <h3>{{ total_appointments }}</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-warning shadow p-3">
+            <h5>Pending Appointments</h5>
+            <h3>{{ pending_appointments }}</h3>
+        </div>
+    </div>
+
+</div>
     <div class="row text-center">
 
         <div class="col-md-4">
@@ -54,6 +93,10 @@
     </div>
 
 </div>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    © 2026 Clinic Management System | Developed using Django Framework
+</footer>
 
 </body>
 </html>
