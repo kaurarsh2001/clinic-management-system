@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient History</title>
+</head>
+
+<body>
+
+<h1>Patient Visit History</h1>
+
+<h3>Patient: {{ patient }}</h3>
+
+<table border="1">
+<tr>
+<th>Doctor</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+{% for appointment in appointments %}
+<tr>
+<td>{{ appointment.doctor }}</td>
+<td>{{ appointment.date }}</td>
+<td>{{ appointment.status }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

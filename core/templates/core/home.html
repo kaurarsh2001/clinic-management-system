@@ -9,13 +9,12 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="/">Clinic Management</a>
-    <div>
-      <a class="btn btn-light" href="/admin/">Admin Panel</a>
-    </div>
-  </div>
+<nav style="background:#333;padding:10px;">
+    <a href="/" style="color:white;margin-right:20px;">Dashboard</a>
+    <a href="/appointments/" style="color:white;margin-right:20px;">Appointments</a>
+    <a href="/reports/" style="color:white;margin-right:20px;">Reports</a>
+    <a href="/admin/" style="color:white;">Admin</a>
+    <a href="{% url 'logout' %}" style="color:white;">Logout</a>
 </nav>
 
 <div class="container mt-5">
@@ -86,7 +85,7 @@
             <div class="card shadow p-3">
                 <h4>Appointments</h4>
                 <p>Schedule and manage appointments</p>
-                <a href="/admin/core/appointment/" class="btn btn-warning">View Appointments</a>
+                <a href="/appointments/" class="btn btn-warning">View Appointments</a>
             </div>
         </div>
 

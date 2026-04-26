@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Appointments</title>
+</head>
+
+<body>
+
+<h1>Appointments List</h1>
+
+<form method="GET">
+    <input type="text" name="q" placeholder="Search patient">
+    <button type="submit">Search</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>Doctor</th>
+        <th>Patient</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+
+    {% for appointment in appointments %}
+    <tr>
+        <td>{{ appointment.doctor }}</td>
+        <td>{{ appointment.patient }}</td>
+        <td>{{ appointment.date }}</td>
+        <td>{{ appointment.status }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Doctor Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<body>
+
+<nav style="background:#333;padding:10px;">
+    <a href="/" style="color:white;margin-right:20px;">Dashboard</a>
+    <a href="/appointments/" style="color:white;margin-right:20px;">Appointments</a>
+    <a href="/reports/" style="color:white;margin-right:20px;">Reports</a>
+    <a href="/admin/" style="color:white;margin-right:20px;">Admin</a>
+    <a href="{% url 'logout' %}" style="color:white;">Logout</a>
+</nav>
+
+<h1>Doctor Dashboard</h1>
+
+<p>Total Appointments: {{ total_appointments }}</p>
+<p>Pending Appointments: {{ pending }}</p>
+<p>Completed Appointments: {{ completed }}</p>
+
+
+<h3>Appointment Statistics</h3>
+
+<canvas id="appointmentChart" width="400" height="200"></canvas>
+
+<script>
+
+const ctx = document.getElementById('appointmentChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Pending', 'Completed'],
+        datasets: [{
+            label: 'Appointments',
+            data: [Number("{{ pending }}"), Number("{{ completed }}")],
+            backgroundColor: ['orange', 'green']
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+ });
+ 
+ </script>
+
+</body>
+</html>
+
